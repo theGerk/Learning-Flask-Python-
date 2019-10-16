@@ -16,6 +16,10 @@ def home():
         year=datetime.now().year,
     )
 
+@app.route('/test/<string:msg>')
+def test(msg):
+	return "Hello from " + msg
+
 @app.route('/contact')
 def contact():
     """Renders the contact page."""
